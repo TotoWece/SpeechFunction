@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpeechFunction.SpeechView"
+             Title="SPEECH"
+             BackgroundColor="{StaticResource LightBlueColor}">
+    <ContentPage.Content>
+        <StackLayout Padding="16"
+                     VerticalOptions="FillAndExpand">
+            <StackLayout Padding="0"
+                         VerticalOptions="CenterAndExpand">
+                <Frame CornerRadius="10" 
+                   HasShadow="True" 
+                   BackgroundColor="{StaticResource WhiteColor}">
+                    <Frame.Content>
+                        <StackLayout>
+                            <Label Text="Text =" 
+                                   TextColor="{StaticResource LightTextColor}"
+                                   FontSize="14"
+                                   WidthRequest="80"
+                                   VerticalOptions="Center"/>
+                            <Entry x:Name="textEntry"
+                                   Placeholder="Type Your Text Here"
+                                   TextColor="{StaticResource DarkTextColor}"
+                                   FontSize="17"
+                                   HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                <Frame CornerRadius="10" 
+                       HasShadow="True" 
+                       BackgroundColor="{StaticResource WhiteColor}">
+                    <Frame.Content>
+                        <StackLayout>
+                            <Label Text="Language =" 
+                                   TextColor="{StaticResource LightTextColor}"
+                                   FontSize="14"
+                                   WidthRequest="80"
+                                   VerticalOptions="Center"/>
+                            <Picker x:Name="languagePicker" 
+                                    Title="Input Language"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                <Frame CornerRadius="10" 
+                       HasShadow="True" 
+                       BackgroundColor="{StaticResource WhiteColor}">
+                    <Frame.Content>
+                        <StackLayout>
+                            <Label Text="Volume =" 
+                                   TextColor="{StaticResource LightTextColor}"
+                                   FontSize="14"
+                                   WidthRequest="80"
+                                   VerticalOptions="Center"/>
+                            <Slider x:Name="volumeSlider"
+                                    Value="1"
+                                    Minimum="0"
+                                    Maximum="1"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                <Frame CornerRadius="10" 
+                       HasShadow="True" 
+                       BackgroundColor="{StaticResource WhiteColor}">
+                    <Frame.Content>
+                        <StackLayout>
+                            <Label Text="Pitch =" 
+                                   TextColor="{StaticResource LightTextColor}"
+                                   FontSize="14"
+                                   WidthRequest="80"
+                                   VerticalOptions="Center"/>
+                            <Slider x:Name="pitchSlider"
+                                    Value="1"
+                                    Minimum="0.1"
+                                    Maximum="2"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                <Frame CornerRadius="10" 
+                       HasShadow="True" 
+                       BackgroundColor="{StaticResource WhiteColor}">
+                    <Frame.Content>
+                        <StackLayout>
+                            <Label Text="Rate =" 
+                                   TextColor="{StaticResource LightTextColor}"
+                                   FontSize="14"
+                                   WidthRequest="80"
+                                   VerticalOptions="Center"/>
+                            <Slider x:Name="rateSlider"
+                                    Value="1"
+                                    Minimum="0.1"
+                                    Maximum="2"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="speakButton"
+                    Text="SPEAK" 
+                    TextColor="{StaticResource WhiteColor}"
+                    BackgroundColor="{StaticResource DarkBlueColor}"
+                    CornerRadius="10"
+                    VerticalOptions="End"
+                    Clicked="SpeakButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
